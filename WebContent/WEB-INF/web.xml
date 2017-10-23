@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>web001</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+<servlet>
+   <servlet-name>FirstServlet</servlet-name>
+   <servlet-class>jap.com.web001</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>FirstServlet</servlet-name>
+   <url-pattern>/FirsetServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>fsSave</servlet-name>
+   <servlet-class>jap.com.web002</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>fsSave</servlet-name>
+   <url-pattern>/FirsetServlet/save</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>ajaxComm</servlet-name>
+   <servlet-class>jap.com.myAjax</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>ajaxComm</servlet-name>
+   <url-pattern>/ajaxComm</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>mainPage</servlet-name>
+   <servlet-class>jap.com.web003</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>mainPage</servlet-name>
+   <url-pattern>/mainPage</url-pattern>
+</servlet-mapping>
+</web-app>
