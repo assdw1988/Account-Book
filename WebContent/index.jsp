@@ -49,6 +49,7 @@ function callback(jasonObj){
 
 function init(){
 	//alert(document.getElementById("title").innerHTML);
+	alert("abc");
 }
 
 </script>
