@@ -26,7 +26,7 @@
             
                 <div class="input-group line left">
                     <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search"></span></span>
-                    <input type="text" class="form-control" placeholder="输入关键字搜索" aria-describedby="basic-addon2">
+                    <input type="text" class="form-control" placeholder="検索内容" aria-describedby="basic-addon2">
                 </div>
                 <select class="form-control line left">
                     <option>1</option>
@@ -58,47 +58,36 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="add11">添加</h4>
+                                        <h4 class="modal-title" id="add11">追加</h4>
                                     </div>
                                     <div class="modal-body">
                                         <ul>
                                             <li>
-                                                <label><span>序号 ：</span></label>
+                                                <label><span>日付：</span></label>
+                                                <input style="width:150px"　type="text"/>
+                                                
+                                            </li>
+                                            <li>
+                                                <label><span>種類：</span></label>
                                                 <input type="text"/>
                                             </li>
                                             <li>
-                                                <label><span>用户名 ：</span></label>
+                                                <label><span>金額：</span></label>
                                                 <input type="text"/>
                                             </li>
                                             <li>
-                                                <label><span>姓名 ：</span></label>
+                                                <label><span>領収書コード：</span></label>
                                                 <input type="text"/>
                                             </li>
                                             <li>
-                                                <label><span>性别 ：</span></label>
-                                                <input type="text"/>
-                                            </li>
-                                            <li>
-                                                <label><span>身份证 ：</span></label>
-                                                <input type="text"/>
-                                            </li>
-                                            <li>
-                                                <label><span>职位 ：</span></label>
-                                                <input type="text"/>
-                                            </li>
-                                            <li>
-                                                <label><span>邮箱 ：</span></label>
-                                                <input type="text"/>
-                                            </li>
-                                            <li>
-                                                <label><span>备注 ：</span></label>
+                                                <label><span>備考 ：</span></label>
                                                 <input type="text"/>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
-                                        <button type="button" class="btn btn-primary btn-sm">保存</button>
+                                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">キャンセル</button>
+                                        <button type="button" onclick="insertbtn()" class="btn btn-primary btn-sm">登録</button>
                                     </div>
                                 </div>
                             </div>
@@ -155,8 +144,6 @@
                         </div>
                         <!--Modal end-->
                     </tr>
-                    
-                    
                     </tbody>
                 </table>
                 <ul class="pagination right">
@@ -191,6 +178,10 @@
         modal.find('.modal-title').text('' + recipient)
         modal.find('.modal-body input').val(recipient)
     })
+    
+    function insertbtn(){
+       alert("11111");	
+    }
 </script>
 </body>
 </html>
