@@ -45,4 +45,15 @@
    <servlet-name>mainPage</servlet-name>
    <url-pattern>/mainPage</url-pattern>
 </servlet-mapping>
+
+<servlet>
+   <servlet-name>actionP1</servlet-name>
+   <servlet-class>jap.com.web004</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>actionP1</servlet-name>
+   <url-pattern>/actionP1</url-pattern>
+</servlet-mapping>
+
+
 </web-app>
