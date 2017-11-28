@@ -36,7 +36,6 @@ public class web002 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Start Web002");
 	    request.setCharacterEncoding("Shift_JIS");
 	    response.setContentType("text/html;charset=Shift_JIS");
 	    

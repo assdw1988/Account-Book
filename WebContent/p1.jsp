@@ -13,7 +13,9 @@
     <style>
     </style>
 </head>
+
 <body>
+<form action="./actionP1" id="formP1" method="post">
 <div class="container-fluid">
         <div class="row">
             <div>
@@ -64,30 +66,30 @@
                                         <ul>
                                             <li>
                                                 <label><span>日付：</span></label>
-                                                <input style="width:150px"　type="text"/>
+                                                <input id="add_date" name="add_date" style="width:150px" type="text"/>
                                                 
                                             </li>
                                             <li>
                                                 <label><span>種類：</span></label>
-                                                <input type="text"/>
+                                                <input id="add_type" name="add_type" type="text"/>
                                             </li>
                                             <li>
                                                 <label><span>金額：</span></label>
-                                                <input type="text"/>
+                                                <input id="add_money" type="text"/>
                                             </li>
                                             <li>
                                                 <label><span>領収書コード：</span></label>
-                                                <input type="text"/>
+                                                <input id="add_ryosyuCd" type="text"/>
                                             </li>
                                             <li>
                                                 <label><span>備考 ：</span></label>
-                                                <input type="text"/>
+                                                <input id="add_memo" type="text"/>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">キャンセル</button>
-                                        <button type="button" onclick="insertbtn()" class="btn btn-primary btn-sm">登録</button>
+                                        <button id="canlBtn" type="button" class="btn btn-default btn-sm" data-dismiss="modal">キャンセル</button>
+                                        <button id="insertBtn" type="button" onclick="insertbtn()" class="btn btn-primary btn-sm">登録</button>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +162,8 @@
             <!--右侧内容结束-->
         </div>
 </div>
-
+<input id="testHid1" type="hidden" value="123"/>
+</form>
 
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -179,9 +182,12 @@
         modal.find('.modal-body input').val(recipient)
     })
     
+    //家計簿の登録処理
     function insertbtn(){
-       alert("11111");	
+    	alert(document.getElementById("testHid1").value);
+    	document.getElementById("formP1").submit();
     }
 </script>
 </body>
+
 </html>

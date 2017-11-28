@@ -32,7 +32,7 @@ public class DatabaseUtil {
 		return conn;
 	}
 	
-	public static void closeAll(ResultSet rset, Statement stmt, Connection conn) {
+	private static void closeAll(ResultSet rset, Statement stmt, Connection conn) {
 		closeResource(rset);
 		closeResource(stmt);
 		closeResource(conn);
@@ -171,4 +171,6 @@ public class DatabaseUtil {
 		}
 		return result;
 	}
+	
+	
 }
