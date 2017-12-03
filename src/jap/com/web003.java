@@ -44,8 +44,6 @@ public class web003 extends HttpServlet {
 		request.setCharacterEncoding("Shift_JIS");
 		response.setContentType("text/html;charset=Shift_JIS");
 		
-		System.out.println("myIssues");
-		
 		ServletContext context = this.getServletContext();
 		RequestDispatcher dispatcher = context.getRequestDispatcher("/p1.jsp");
 		dispatcher.include(request, response);
