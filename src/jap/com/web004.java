@@ -2,6 +2,8 @@ package jap.com;
 
 import java.io.IOException;
 
+import org.apache.commons.logging.LogFactory;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
