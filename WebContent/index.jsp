@@ -40,7 +40,7 @@ function userLongin(){
 
 function callback(jasonObj){
 	var reCheck = jasonObj.longin;
-	if(reCheck == "0"){
+	if(reCheck == "NG"){
 		alert("ユーザーコード　または　パースワード入力不正")
 	} else {
 		document.getElementById("form1").submit();

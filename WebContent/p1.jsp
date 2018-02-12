@@ -22,7 +22,7 @@
                 <br/>
                 <ol class="breadcrumb">
                     <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;ホームページ</a></li>
-                    <li class="active">系统管理 - 表格</li>
+                    <li class="active">家計簿明細</li>
                 </ol>
             
             
@@ -54,19 +54,19 @@
                     <tbody>
                     <tr>
                         <!-- Modal begin-->
-                        <!--添加-->
+                        <!--追加　-->
                         <div class="modal fade" id="add1" tabindex="-1" role="dialog" aria-labelledby="add11">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="add11">追加</h4>
+                                        <h4 class="modal-title" id="add_lab">追加</h4>
                                     </div>
                                     <div class="modal-body">
                                         <ul>
                                             <li>
                                                 <label><span>日付：</span></label>
-                                                <input id="add_date" name="add_date" style="width:150px" type="text"/>
+                                                <input id="add_date" name="add_date" type="text"/>
                                                 
                                             </li>
                                             <li>
@@ -75,11 +75,11 @@
                                             </li>
                                             <li>
                                                 <label><span>金額：</span></label>
-                                                <input id="add_money" type="text"/>
+                                                <input id="add_money" name="add_money" type="text"/>
                                             </li>
                                             <li>
                                                 <label><span>領収書コード：</span></label>
-                                                <input id="add_ryosyuCd" type="text"/>
+                                                <input id="add_ryosyuCd" style="width:150px" type="text"/>
                                             </li>
                                             <li>
                                                 <label><span>備考 ：</span></label>
@@ -88,58 +88,48 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button id="canlBtn" type="button" class="btn btn-default btn-sm" data-dismiss="modal">キャンセル</button>
+                                        <button id="add_canlBtn" type="button" class="btn btn-default btn-sm" data-dismiss="modal">キャンセル</button>
                                         <button id="insertBtn" type="button" onclick="insertbtn()" class="btn btn-primary btn-sm">登録</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="edit" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel1">编辑</h4>
+                                        <h4 class="modal-title" id="update_lab">更新</h4>
                                     </div>
                                     <div class="modal-body">
                                         <ul>
                                             <li>
-                                                <label><span>序号 ：</span></label>
-                                                <input type="text"/>
+                                                <label><span>日付：</span></label>
+                                                <input id="up_date" name="add_date" type="text"/>
+                                                
                                             </li>
                                             <li>
-                                                <label><span>用户名 ：</span></label>
-                                                <input type="text"/>
+                                                <label><span>種類：</span></label>
+                                                <input id="up_type" name="add_type" type="text"/>
                                             </li>
                                             <li>
-                                                <label><span>姓名 ：</span></label>
-                                                <input type="text"/>
+                                                <label><span>金額：</span></label>
+                                                <input id="up_money" name="add_money" type="text"/>
                                             </li>
                                             <li>
-                                                <label><span>性别 ：</span></label>
-                                                <input type="text"/>
+                                                <label><span>領収書コード：</span></label>
+                                                <input id="up_ryosyuCd" style="width:150px" type="text"/>
                                             </li>
                                             <li>
-                                                <label><span>身份证 ：</span></label>
-                                                <input type="text"/>
-                                            </li>
-                                            <li>
-                                                <label><span>职位 ：</span></label>
-                                                <input type="text"/>
-                                            </li>
-                                            <li>
-                                                <label><span>邮箱 ：</span></label>
-                                                <input type="text"/>
-                                            </li>
-                                            <li>
-                                                <label><span>备注 ：</span></label>
-                                                <input type="text"/>
+                                                <label><span>備考 ：</span></label>
+                                                <input id="up_memo" type="text"/>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
-                                        <button type="button" class="btn btn-primary btn-sm">保存</button>
+                                        <button id="up_canlBtn" type="button" class="btn btn-default btn-sm" data-dismiss="modal">キャンセル</button>
+                                        <button id="updateBtn" type="button" onclick="insertbtn()" class="btn btn-primary btn-sm">更新</button>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +149,6 @@
                     <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                 </ul>
             </div>
-            <!--右侧内容结束-->
         </div>
 </div>
 <input id="testHid1" type="hidden" value="123"/>

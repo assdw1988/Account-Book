@@ -3,6 +3,7 @@ package jap.com;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
@@ -45,23 +46,23 @@ public class myAjax extends HttpServlet {
 
 	private void doFire(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StringBuffer reBuff = new StringBuffer();
+		String reCheck = "";
 		
 		StringBuffer tempBuffer = new StringBuffer();
-	    tempBuffer = new StringBuffer();
+		tempBuffer = new StringBuffer();
 		tempBuffer.append(" SELECT * ");
 		tempBuffer.append("   FROM c_m_user ");
 		tempBuffer.append("  WHERE user_cd = ? ");
 		tempBuffer.append("    AND password = ? ");
-		
+
 		String userCd = request.getParameter("userCd");
 		String pw = request.getParameter("pw");
-		
+
 		Connection conn = DatabaseUtil.getConn();
-		String[] tempPar = new String[] {userCd,pw};
-		List<HashMap<Object, Object>> tempList = DatabaseUtil.selectFirst(tempBuffer.toString(),conn,tempPar);
-		
-		String reCheck = "";
-		if(tempList.size() == 0) {
+		String[] tempPar = new String[] { userCd, pw };
+		List<HashMap<Object, Object>> tempList = DatabaseUtil.selectFirst(tempBuffer.toString(), conn, tempPar);
+
+		if (tempList.size() == 0) {
 			reCheck = "NG";
 		} else {
 			reCheck = "OK";
